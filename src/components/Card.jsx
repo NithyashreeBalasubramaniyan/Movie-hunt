@@ -1,8 +1,7 @@
 import '../App.css'
 import { Link } from 'react-router-dom'
-import imglogo from '../assets/imglogo.jpg'
 export const Card = ({ poster_path, id, overview, title, vote_average,vote_count}) => {
-  const image=poster_path? `http://image.tmdb.org/t/p/original${poster_path}`:imglogo
+  const image=poster_path? `http://image.tmdb.org/t/p/original${poster_path}`:'./imglogo.jpg'
   return (
     <div>
         <div className="col  h-100">

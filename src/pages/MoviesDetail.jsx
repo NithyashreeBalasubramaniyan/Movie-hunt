@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import {  useParams } from 'react-router-dom'
-import imglogo from '../assets/imglogo.jpg'
+
 export const MoviesDetail = () => {
 
   const params=useParams()
@@ -16,7 +16,7 @@ export const MoviesDetail = () => {
               fetchMovies()
     },[url,params.id])
     console.log(movie)
-    const image=movie.poster_path? `http://image.tmdb.org/t/p/original${movie.poster_path}`:imglogo
+    const image=movie.poster_path? `http://image.tmdb.org/t/p/original${movie.poster_path}`:'./imglogo.jpg'
 
   return (
     <div>
