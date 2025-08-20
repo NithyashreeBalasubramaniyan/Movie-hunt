@@ -5,7 +5,7 @@ export const MoviesDetail = () => {
 
   const params=useParams()
   const [movie,setMovie]=useState([])
-  const key='83498be9aef4cdc05b538b6b32f7c72c'
+  const key=import.meta.env.VITE_API_KEY
   const url=`https://api.themoviedb.org/3/movie/${params.id}?api_key=${key}`;
   useEffect(()=>{
               async function fetchMovies(){
